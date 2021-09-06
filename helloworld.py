@@ -6,7 +6,7 @@ def split_str(s):
     return [ch for ch in s]
 
 def fetch_decrypt():
-    os.system("rm helloworld.png")
+    os.system("rm helloworld.png &> /dev/null")
     os.system("wget https://salyut.one/~axtlos/helloworld.png -O helloworld.png &> /dev/null")
     with open("helloworld.png", "r+b") as f:
         mm = mmap.mmap(f.fileno(),0)
