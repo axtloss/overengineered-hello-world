@@ -6,13 +6,13 @@ def split_str(s):
     return [ch for ch in s]
 
 def fetch_decrypt():
-    os.system("rm helloworld.png &> /dev/null")
-    os.system("wget https://salyut.one/~axtlos/helloworld.png -O helloworld.png &> /dev/null")
     with open("helloworld.png", "r+b") as f:
         mm = mmap.mmap(f.fileno(),0)
-        test=mm.read(12)
-        return test.decode("utf-8")
+        mm.seek(mm.find(b"Hello World!",0))
+        helloworld=mm.read(12)
+        print(helloworld)
         mm.close
+        return helloworld.decode("utf-8")
 
 def main():
     helloworld=fetch_decrypt()
@@ -32,6 +32,8 @@ def main():
             y=y+1
         if x >= len(output):
             break
+    print(alphabet)
+    print(output)
     x=0
     print(alphabetnumber)
     while x != len(alphabetnumber):
