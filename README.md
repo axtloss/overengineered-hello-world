@@ -2,7 +2,7 @@
   <img src="https://github.com/axtloss/overengenieered-hello-world/blob/main/logo.png?raw=true" alt="Logo" width="150" height="150">
 </p>
 
-## overengineered -hello-world
+## overengineered-hello-world
 a stupidly overengineered way to print out "Hello world" in python
 
 
